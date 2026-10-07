@@ -1,0 +1,31 @@
+[project]
+name = "kkbox-churn-ml-platform"
+version = "0.1.0"
+description = "Production-grade customer churn prediction platform with ML reliability monitoring and controlled retraining."
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+authors = [
+    { name = "Manya Rajput" }
+]
+dependencies = [
+    "numpy>=2.4.6",
+    "pandas>=3.0.6",
+    "pyarrow>=25.0.1",
+    "pyyaml>=6.0.3",
+    "scikit-learn>=1.9.1",
+    "scipy>=1.17.1",
+    "xgboost>=3.2.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+package = true
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.10",
+]
